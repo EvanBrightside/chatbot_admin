@@ -1,0 +1,451 @@
+ru:
+  "true": Да
+  "false": Нет
+
+  time:
+    formats:
+      admin: '%e %B %Y, %H:%M'
+      announcement: '%e %B %Y'
+      announcement_index_page: '%d.%m.%Y'
+      announcement_slug: '%Y-%m-%d %H:%M'
+      event: '%d %B'
+      event_day: '%d'
+      event_year: '%d %B %Y'
+      event_full: '%d %B %Y, %A'
+      feedback_request: '%e %B %Y %H:%M'
+      feedback_request_admin_email_subject: '%e %B %Y %H:%M'
+      feedback_request_manageable: '%e %B %Y %H:%M'
+      primary: '%d.%m.%Y'
+      short: '%e %B %Y'
+
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "руб."
+        separator: ","
+        delimiter: " "
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+  errors:
+    messages:
+      invalid: "Имеет неверное значение"
+      empty: "Не может быть пустым"
+      blank: "Не может быть пустым"
+      extension_white_list_error: Неверный формат файла
+
+  attributes:
+    name: Название
+    published: Опубликована
+    nav_name: Название для навигации
+    nav_published: Показывать в навигации
+    slug: URL
+    body: Текст
+    lead: Краткое описание
+    published_at: Дата публикации
+    created_at: Дата
+    meta_title: Title
+    meta_description: Description
+    parent: Родитель
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "Имеет непредусмотренное значение"
+        exclusion: "Имеет зарезервированное значение"
+        invalid: "Имеет неверное значение"
+        confirmation: "не совпадает с подтверждением"
+        accepted: "Нужно подтвердить"
+        empty: "Не может быть пустым"
+        blank: "Не может быть пустым"
+        too_much_nesting: Итоговая вложенность не может превышать %{count} уровней.
+        too_long:
+          one:   "Слишком большой длины (не может быть больше чем %{count} символ)"
+          few:   "Слишком большой длины (не может быть больше чем %{count} символа)"
+          many:  "Слишком большой длины (не может быть больше чем %{count} символов)"
+          other: "Слишком большой длины (не может быть больше чем %{count} символа)"
+        too_short:
+          one:   "Недостаточной длины (не может быть меньше %{count} символа)"
+          few:   "Недостаточной длины (не может быть меньше %{count} символов)"
+          many:  "Недостаточной длины (не может быть меньше %{count} символов)"
+          other: "Недостаточной длины (не может быть меньше %{count} символа)"
+        wrong_length:
+          one:   "Неверной длины (может быть длиной ровно %{count} символ)"
+          few:   "Неверной длины (может быть длиной ровно %{count} символа)"
+          many:  "Неверной длины (может быть длиной ровно %{count} символов)"
+          other: "Неверной длины (может быть длиной ровно %{count} символа)"
+        taken: "Уже существует"
+        wrong_host: "Email должен принадлежать домену %{host} и должен сущестовать на сервере."
+    models:
+      page: Страница
+      user: Пользователь
+      settings: Настройки
+    attributes:
+      settings:
+        company_name: Название компании
+        contact_email: Контактный e-mail
+        email: E-mail для уведомлений
+        email_header_from: E-mail сервера
+        server_url: URL сервера
+        start_custom_message: Кастомное сообщение первого экрана
+        error_message: Сообщение об ошибке ввода
+        thank_you_message: Сообщение при отправке вопроса на email
+        per_page: Количество на странице
+      page:
+        behavior: Тип страницы
+      user:
+        email: E-mail
+        password: Пароль
+        roles: Роли
+        admin: Админ
+        manager: Менеджер
+      paper_trail/version:
+        item: Объект
+        item_type: Тип
+        event: Событие
+        whodunnit: Юзер
+
+  social:
+    log_in: Войти через социальные сети
+    already_bound: Этот профиль социальной сети уже был привязан
+    bind_success: Вы успешно привязали профиль %{provider} к своей текущей учетной записи
+    login_success: Вы успешно вошли с помощью профиля %{provider}
+    email_bind_success: Профиль %{provider} был привязан к вашему основному аккаунту
+    signup_success: Вы вошли с помощью профиля социальной сети %{provider}
+
+  flash:
+    actions:
+      create:
+        notice: Объект успешно создан
+        alert: Заполните, пожалуйста, форму без ошибок
+      update:
+        notice: Объект успешно обновлен
+        alert: Заполните, пожалуйста, форму без ошибок
+      destroy:
+        notice: Объект успешно удален
+        alert: Объект не может быть удален
+      batch_action:
+        none: Выберите хотя бы один объект
+        notice: Операция завершена успешно
+    access_denied: Доступ запрещен
+
+  simple_form:
+    hints:
+      event:
+        button_name: Максимум 35 символов
+      knowledge:
+        button_name: Максимум 35 символов
+      defaults:
+        slug: Сформируется автоматически, если не задан. Допустимы латинские символы, цифры и дефис.
+      chat_answer:
+        text: Максимум 35 символов
+      messages:
+        file: 'Допустимые форматы: jpeg, gif, png, mpeg, mov, mp4, pdf / Максимальный размер: 50 MB'
+        photo: 'Допустимые форматы: jpeg / Максимальный размер: 1 MB'
+    required:
+      text: 'Обязательно'
+    labels:
+      chat_message:
+        meta_type: Тип сообщения
+        send_at: Таймер
+        messages:
+          meta_type: Тип сообщения
+          text: Текст сообщения
+          file: Файл
+          photo: Картинка
+          timer: Отправлять через (сек.)
+          adapters:
+            tg: Telegram
+            vk: ВКонтакте
+            ok: Одноклассники
+            fb: Facebook
+            vb: Vider
+      chat_answer:
+        text: Текст ответа
+        meta_type: Тип
+        link_node: Сценарий или вопрос
+        valid_regexp: Валидация сообщения
+        error_message: Сообщение об ошибке
+      chat_script:
+        chat_tree_script: Сценарий
+
+  enumerize:
+    chat_message:
+      meta_type:
+        plain: Обычное
+        info: Информационное
+        letter_to_manager: Обращение к менеджеру
+        contact_phone: Контактные данные (телефон)
+        contact_email: Контактные данные (почта)
+    chat_answer:
+      meta_type:
+        user_input: Пользовательский ввод
+        option: Опция
+        link: Ссылка
+        link_to_back: Ссылка назад
+        link_to_start: Ссылка в начало
+        custom_user_input: Общение с менеджером
+      valid_regexp:
+        phone: Номер телефона
+        email: Email
+        emailorphone: Email или номер телефона
+    message:
+      meta_type:
+        text: Текст
+        file: Файл
+        photo: Картинка
+
+  views:
+    pagination:
+      first: Первая страница
+      last: Последняя страница
+      next: Следующая страница
+      previous: Предыдущая страница
+      truncate: '...'
+      admin:
+        first: Первая страница
+        last: Последняя страница
+        next: "&raquo;"
+        previous: "&laquo;"
+        truncate: '...'
+
+  labels:
+    application:
+      admin: Панель управления
+    admin:
+      add: Добавить
+      add_child: Добавить подраздел
+      back: Назад
+      cancel: Отменить
+      choose: Выбрать
+      destroy: Удалить
+      edit: Редактировать
+      show: Просмотр изменений
+      go_to_root: Перейти на сайт
+      info: Справка
+      other: Другое
+      search: Поиск
+      save: Сохранить
+      legend:
+        common: Основное
+        seo: SEO
+      logout: Выйти
+      nav_published: В навигации
+      published: Опубликована
+      locked: Закреплена
+      server_restart: Перезагрузить сервер
+      unpublished: Не опубликована
+      batch_actions:
+        destroy: Удалить
+        set_nav_published_off: Убрать из навигации
+        set_nav_published_on: Опубликовать в навигации
+        set_published_off: Снять с публикации
+        set_published_on: Опубликовать
+        set_notifications_inactive: "Выключить уведомления"
+        set_notifications_active: "Включить уведомления"
+
+
+  confirmations:
+    destroy:
+      one: Вы уверены что хотите удалить?
+      many: Вы уверены что хотите удалить эти объекты?
+
+  layouts:
+    application:
+      header: Главная
+      title: Adminos
+    admin:
+      header: &layouts_admin_header Панель управления
+      title: &layouts_admin_title Панель управления
+
+  admin:
+    actions:
+      create: Создание
+      update: Обновление
+      destroy: Удаление
+    helps:
+      actions:
+        index:
+          header: Панель управления
+          title: *layouts_admin_title
+          legend:
+            edit: Редактирование
+            delete: Удаление
+            move: Сортировка
+            published: Видимость на сайте
+            nav_published: Видимость в навигации
+    users:
+      actions:
+        index:
+          header: Администраторы
+          title: Администраторы
+      labels:
+        actions:
+          create: Добавить администратора
+          edit: Сохранить администратора
+          new: Добавить администратора
+          update: Сохранить администратора
+        form:
+          login: Войти
+          registration: Зарегистрироваться
+          forgot_password: Восстановить пароль
+          confirm: Я не получил инструкций о подтверждении аккаунта
+          oauth: Войти с помощью
+          remember_me: Запомнить меня
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+          new_password: Новый пароль
+          new_password_confirmation: Подтверждение нового пароля
+        buttons:
+          password_reset: Выслать инструкции
+          password_edit: Изменить пароль
+          register: Зарегистрироваться
+    paper_trail/versions:
+      actions:
+        index:
+          header: Действия
+          title: Действия
+      labels:
+        actions:
+          show: Просмотр изменений
+    settings:
+      actions:
+        index:
+          header: Настройки
+      sets:
+        counters: Счётчики
+        index: Главная страница
+        contact_information: Контактная информация
+      labels:
+        actions:
+          create: Настройки
+          edit: Сохранить настройки
+          update: Сохранить настройки
+        contact_email: E-mail
+    chat_trees:
+      actions:
+        index:
+          header: Сценарии
+          title: Сценарии
+      labels:
+        main: Дерево диалога
+        actions:
+          new: Добавить сценарий
+          new_custom_message: Добавить уведомление
+    chat_answers:
+      labels:
+        actions:
+          new: Добавление варианта ответа
+          edit: Редактирование варианта ответа
+    chat_messages:
+      labels:
+        actions:
+          new: Добавление сообщения
+          edit: Редактирование сообщения
+    chat_scripts:
+      labels:
+        actions:
+          new: Добавление сценария
+          edit: Редактирование сценария
+    feedbacks:
+      labels:
+        actions:
+          show: Обратная связь
+      actions:
+        index:
+          header: Обратная связь
+          title: Обратная связь
+    custom_questions:
+      labels:
+        actions:
+          show: Тест
+    questions:
+      labels:
+        actions:
+          show: Вопрос спикеру
+      actions:
+        index:
+          header: Вопросы спикеру
+          title: Вопросы спикеру
+    statistics:
+      title: Статистика
+      actions:
+        tests_results:
+          title: По результатам тестов
+        scenario:
+          title: По сценариям
+        customers:
+          title: По пользователям
+        connections:
+          title: По датам подключения
+    customers:
+      status:
+        "true": Active
+        "false": Inactive
+      notifications:
+        "true": Включены
+        "false": Выключены
+      labels:
+        actions:
+          show: Пользователь
+      actions:
+        index:
+          header: Пользователи
+          title: Пользователи
+      notification: Уведомления
+    custom_messages:
+      labels:
+        actions:
+          new: Добавление сообщения
+          edit: Редактирование сообщения
+          show: Сообщение для пользователей
+      actions:
+        index:
+          header: Уведомления
+          title: Уведомления
+    test_results:
+      labels:
+        actions:
+          new: Добавление результата теста
+          edit: Редактирование результата теста
+          show: Сообщение для пользователей
+      actions:
+        index:
+          header: Результы тестов
+          title: Результы тестов
+    events:
+      actions:
+        index:
+          header: Мероприятия
+          title: Мероприятия
+      labels:
+        actions:
+          new: Добавить мероприятие
+          edit: Редактировать мероприятие
+    knowledges:
+      actions:
+        index:
+          header: База знаний
+          title: База знаний
+      labels:
+        actions:
+          new: Добавить вопрос и ответ
+          edit: Редактировать вопрос и ответ
+    partner_banks:
+      actions:
+        index:
+          header: Банки партнеры
+          title: Банки партнеры
+      labels:
+        actions:
+          new: Добавить банк партнер
+          edit: Редактировать банк партнер
+
+  pages:
+    behaviors:
+      pages: Типовая страница
+
+  unauthorized:
+    default: Необходимо войти или зарегистрироваться.

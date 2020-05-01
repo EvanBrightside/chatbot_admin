@@ -1,0 +1,15 @@
+.f__fieldset
+  = f.input :chat_tree_id, as: :hidden
+  = f.association :chat_tree_script, collection: ChatTree.with_meta_type(:node).by_name, include_blank: false
+  - adapters_obj = OpenStruct.new(f.object.adapters)
+  = f.simple_fields_for :adapters, adapters_obj do |field|
+    .f-field
+      .f-field__label
+        label.f-label Использовать сценарий в
+    - DialogService::ADAPTERS.each do |adapter|
+      - checked = adapters_obj.send(adapter) == '1'
+      = field.input adapter,
+                    label: I18n.t("simple_form.labels.chat_message.messages.adapters.#{adapter}"),
+                    as: :boolean,
+                    wrapper: :check,
+                    input_html: { checked: checked }

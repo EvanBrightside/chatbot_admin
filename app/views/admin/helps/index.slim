@@ -1,0 +1,29 @@
+- title I18n.t('admin.helps.actions.index.title')
+
+= admin_page_header I18n.t('admin.helps.actions.index.header')
+h4= t('admin.helps.title_html')
+ul
+  li=t('admin.helps.hint1_html')
+  li=t('admin.helps.hint2_html')
+  li=t('admin.helps.hint3_html')
+  li=t('admin.helps.hint4_html')
+  li=t('admin.helps.hint5_html')
+  li=t('admin.helps.hint6_html')
+  li=t('admin.helps.hint7_html')
+h4 =t('admin.helps.icons_meaning')
+ul.legend
+  li
+    <i class="icon-edit"></i>
+    = I18n.t('admin.helps.actions.index.legend.edit')
+  li
+    <i class="icon-remove"></i>
+    = I18n.t('admin.helps.actions.index.legend.delete')
+  li
+    <i class="icon-move"></i>
+    = I18n.t('admin.helps.actions.index.legend.move')
+  li
+    <i class="icon-eye-open"></i>
+    = I18n.t('admin.helps.actions.index.legend.published')
+  li
+    <i class="icon-list"></i>
+    = I18n.t('admin.helps.actions.index.legend.nav_published')

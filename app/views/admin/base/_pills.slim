@@ -1,0 +1,15 @@
+- general = lookup_context.template_exists?('general_fields', lookup_context.prefixes, true)
+
+- if general
+  = render 'general_fields', f: f
+
+ul.nav.nav-tabs.with-togglable-navigation
+  - I18n.available_locales.each_with_index do |locale, i|
+    li.nav-item
+      a.nav-link href="#pill_#{locale}" class=('active' if locale == :ru) data-toggle="pill"
+        = locale
+
+.tab-content
+  - I18n.available_locales.each_with_index do |locale, i|
+    .tab-pane id="pill_#{locale}" class=('active' if locale == :ru)
+      = render 'locale_fields', locale: locale, f: f

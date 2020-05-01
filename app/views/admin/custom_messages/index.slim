@@ -1,0 +1,29 @@
+- collection_title
+- content_for :topbar_button do
+  .actions__item.actions__item--add
+    = link_to I18n.t("admin.#{collection.klass.name.underscore.pluralize}.labels.actions.new_custom_message"),
+      new_admin_custom_message_path,
+      class: 'actions__link actions__link--add'
+
+- if collection.present?
+  = batch_actions_tag do
+    .table-list
+      table.table.table-hover.table-sm
+        thead
+          tr
+            th Наименование сообщения
+            th Дата создания
+            th Дата и время отправки сообщения
+            th
+            th
+        tbody
+          - collection.each do |custom_message|
+              tr
+                td= link_to custom_message.name, polymorphic_path([:admin, custom_message])
+                td= format_date custom_message.created_at
+                td= (format_date custom_message.chat_messages[0]&.send_at) || ''
+                td= link_to 'Отправить сейчас', deliver_admin_custom_message_path(custom_message), method: :post, class: 'btn btn-primary btn-sm'
+
+                td.table-list__check= admin_cb(custom_message)
+
+  = paginate collection, theme: :admin

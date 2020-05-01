@@ -1,0 +1,17 @@
+- resource_title
+= resource_header
+
+= simple_form_for resource_form_object, wrapper: :admin do |f|
+  .f
+    .f__wrapper
+      = render 'fields', f: f
+
+      .f-submit.f-submit--fixed
+        .wrapper
+          = f.button :submit, 'Cохранить', class: 'btn btn-primary btn--done'
+          - if f.object.persisted?
+            = link_to 'Удалить', admin_chat_tree_path(f.object), method: :delete, class: 'btn btn-secondary', data: { confirm: "Вы уверены?" }
+
+  - content_for :topbar_button do
+    .actions__item
+      = link_to 'Назад', admin_chat_trees_path, class: 'actions__link actions__link--back'

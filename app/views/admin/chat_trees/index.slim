@@ -1,0 +1,20 @@
+- collection_title
+= collection_header
+
+- if collection.present?
+  = batch_actions_tag do
+    .table-list
+      table.table.table-hover.table-sm
+        thead
+          tr
+            th Сценарий
+            th
+            th
+        tbody
+          - collection.by_name.each do |tree|
+              tr
+                td= link_to tree.name, admin_chat_tree_path(id: tree.id)
+                td.table-list__controls= object_link_edit(tree)
+                td.table-list__check= admin_cb(tree)
+
+  = paginate collection, theme: :admin

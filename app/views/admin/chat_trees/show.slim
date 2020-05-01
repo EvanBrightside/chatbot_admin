@@ -1,0 +1,28 @@
+= admin_page_header do
+  -if action_name == 'show_main'
+    h1= t('admin.chat_trees.labels.main')
+  -else
+    - content_for :topbar_button do
+      .actions__item
+        - if resource.meta_type == 'manual'
+          = link_to 'Назад', admin_custom_messages_path, class: 'actions__link actions__link--back'
+        - else
+          = link_to 'Назад', admin_index_path(resource.class), class: 'actions__link actions__link--back'
+      h1= resource.name
+
+input type="range" id="chat-tree-zoom" value="1" min="0.5" max="1.2" step="0.01"
+.chat-tree-wrapper.dragscroll
+  .chart id="chat-tree" data-tree=@chat_tree_data
+.chat-tree-legend
+  .legend-item
+    a.node.chat-tree-node.message-node Сообщение
+    span &mdash;
+    p  узел "Сообщение", может иметь один или несколько дочерних узлов-ответов
+  .legend-item
+    a.node.chat-tree-node.answer-node Ответ
+    span &mdash;
+    p  узел "Ответ", имеет не больше одного дочернего узла
+  .legend-item
+    a.node.chat-tree-node.new-node Добавить
+    span &mdash;
+    p  конечный узел ветви, позволяет добавить следующий узел

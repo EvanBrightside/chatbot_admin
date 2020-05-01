@@ -1,0 +1,26 @@
+- title t('admin.settings.actions.index.header')
+= resource_header t('admin.settings.actions.index.header')
+
+= simple_form_for [:admin, resource], url: admin_settings_path, wrapper: :admin, html: { method: :put } do |f|
+  /.pill-content
+  .f
+    .f__wrapper
+      .f__fieldset
+        = f.input :email
+        = f.input :email_header_from
+        = f.input :per_page, input_html: {class: 'input-mini'}
+
+      .f__fieldset
+        .f__legend= I18n.t 'admin.settings.sets.contact_information'
+        = f.input :company_name
+        = f.input :contact_email
+
+      .f__fieldset
+        = f.input :start_custom_message
+        = f.input :thank_you_message
+        = f.input :error_message
+        = f.input :server_url
+
+      .f-submit.f-submit--fixed
+        .wrapper
+          = f.button :submit, resource_button_value_main, class: 'btn btn-primary btn--done'

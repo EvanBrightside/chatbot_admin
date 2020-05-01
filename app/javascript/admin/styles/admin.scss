@@ -1,0 +1,28 @@
+@import '~adminos/src/scss/adminos_base.scss';
+@import 'treant-js/Treant.css';
+@import './tree.scss';
+@import 'jquery-datetimepicker/build/jquery.datetimepicker.min';
+
+.sidebar__nav {
+  padding: 5px 0 10px;
+}
+
+.scroll_table {
+  overflow-y: auto;
+}
+
+.existing {
+	margin-left: 3%;
+}
+
+.xdsoft_today {
+  color: #58bdbf !important;
+}
+
+.xdsoft_current.xdsoft_today {
+  color: #fff !important;
+}
+
+.xdsoft_current {
+  background: #58bdbf !important;
+}

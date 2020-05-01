@@ -1,0 +1,20 @@
+- resource_title
+= resource_header
+
+= simple_form_for resource_form_object, wrapper: :admin do |f|
+  .f
+    .f__wrapper
+      - if @prev_node
+        = hidden_field_tag :prev_node_id, @prev_node.id
+        = hidden_field_tag :prev_node_type, @prev_node.class
+      = render 'fields', f: f
+
+      .f-submit.f-submit--fixed
+        .wrapper
+          = f.button :submit, 'Cохранить', class: 'btn btn-primary btn--done'
+          - if f.object.persisted? && !f.object.main_root?
+            = link_to 'Удалить', admin_chat_script_path(f.object), method: :delete, class: 'btn btn-secondary', data: { confirm: "Вы уверены?" }
+
+  - content_for :topbar_button do
+    .actions__item
+      = link_to 'Назад', admin_chat_tree_path(f.object.chat_tree), class: 'actions__link actions__link--back'

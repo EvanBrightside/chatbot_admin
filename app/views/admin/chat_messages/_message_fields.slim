@@ -1,0 +1,13 @@
+tr.nested-fields
+  td.f.toggle-fields-container
+    - adapters_obj = OpenStruct.new(f.object.adapters)
+    = f.simple_fields_for :adapters, adapters_obj do |field|
+      - DialogService::ADAPTERS.each do |adapter|
+        - checked = adapters_obj.send(adapter) != '0'
+        = field.input adapter, as: :boolean, wrapper: :check, input_html: { checked: checked }
+    = f.input :meta_type, include_blank: false, input_html: { class: 'toggle-fields select2it' }
+    = f.input :text, as: :text, wrapper_html: { class: 'options__item', 'data-type': 'text' }
+    = f.input :file, as: :carrierwave, wrapper_html: { class: 'options__item', 'data-type': 'file' }
+    = f.input :photo, as: :carrierwave, wrapper_html: { class: 'options__item', 'data-type': 'photo' }
+    = f.input :timer, input_html: { min: '0', value: f.object.timer || '0' }
+    = link_to_remove_association "Удалить сообщение", f, class: "table-list__remove"

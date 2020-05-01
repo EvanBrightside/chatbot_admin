@@ -1,0 +1,25 @@
+doctype html
+html#no-js lang="ru"
+  head
+    meta charset="utf-8"
+
+    title= 'ChatbotTemplate'
+    meta name="description" content=''
+
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    # link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"
+    # link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+
+    = stylesheet_link_tag :application, media: 'all'
+
+    javascript:
+      document.getElementById('no-js').id = 'js';
+
+    = csrf_meta_tags
+
+  body
+    = yield
+
+    = javascript_include_tag :application
+    = yield :javascript

@@ -1,0 +1,17 @@
+.f__fieldset.toggle-fields-container
+  = f.input :chat_tree_id, as: :hidden
+  = f.input :name, autofocus: true
+  = f.input :meta_type, include_blank: false, input_html: { class: 'toggle-fields select2it' }, collection: f.object.meta_type_options
+  - if f.object.manual?
+    = f.input :send_at, as: :string, input_html: { id:  "custom_datetimepicker" }
+
+.f__fieldset
+  .f__legend Сообщения
+  #messages
+    .table-list.table-list--centered.nested-list
+      table.table.table-sm
+        tbody.nested-node
+          = f.simple_fields_for :messages, f.object.messages.order(:created_at) do |message_form|
+            = render 'message_fields', f: message_form
+      .table-list__action
+        = link_to_add_association 'Добавить сообщение', f, :messages, class: 'btn btn-secondary btn-secondary--alt'

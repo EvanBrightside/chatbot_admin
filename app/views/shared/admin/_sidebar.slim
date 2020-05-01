@@ -1,0 +1,55 @@
+.sidebar#sidebar(data-turbolinks-permanent)
+  .optiscroll.sidebar__wrapper
+    .sidebar__header
+      a.sidebar__header-title href="#{admin_root_path}"
+        = t('layouts.application.title')
+      .sidebar__header-content
+        .nav
+          .nav__item
+            a.nav__link href="#{root_path}" data-turbolinks="false"
+              span.link.link--home
+                = t('labels.admin.go_to_root')
+        .user
+          .user__name
+            = current_user.email
+          .user__role
+            = current_user.translated_roles
+          = link_to destroy_user_session_path, class: 'user__logout', title: t('labels.admin.logout'), method: :delete do
+
+    .sidebar__nav
+      .nav
+        .nav__section
+          - if current_user.has_role? :admin
+            = top_menu_item active: 'admin/chat_trees#' do
+              = link_to t('admin.chat_trees.labels.main'), show_main_admin_chat_trees_path, class: 'nav__link'
+            = top_menu_item active: 'admin/chat_trees#' do
+              = link_to t('admin.chat_trees.actions.index.header'), admin_chat_trees_path, class: 'nav__link'
+            = top_menu_item active: 'admin/custom_messages#' do
+              = link_to t('admin.custom_messages.actions.index.header'), admin_custom_messages_path, class: 'nav__link'
+          .nav__group
+            .nav__group-title.js-nav-group-toggle= t('admin.statistics.title')
+            .nav__group-content.nav__group-content--other
+              = top_menu_item active: 'admin/statistics#' do
+                = link_to t('admin.statistics.actions.customers.title'), customers_admin_statistics_path, class: 'nav__link'
+              = top_menu_item active: 'admin/statistics#' do
+                = link_to t('admin.statistics.actions.scenario.title'), scenario_admin_statistics_path, class: 'nav__link'
+              = top_menu_item active: 'admin/statistics#' do
+                = link_to t('admin.statistics.actions.connections.title'), connections_admin_statistics_path, class: 'nav__link'
+          - if current_user.has_role? :admin
+            = top_menu_item active: 'admin/customers#' do
+              = link_to t('admin.customers.actions.index.header'), admin_customers_path, class: 'nav__link'
+            = top_menu_item active: 'admin/users#' do
+              = link_to t('admin.users.actions.index.header'), admin_users_path, class: 'nav__link'
+
+    .sidebar__footer
+      .nav
+      - if current_user.has_role? :admin
+        = top_menu_item active: 'admin/settings#' do
+          = link_to edit_admin_settings_path, class: 'nav__link' do
+            span.link.link--settings
+              = t('admin.settings.actions.index.header')
+        /= top_menu_item active: 'admin/helps#' do
+          = link_to admin_helps_path, class: 'nav__link' do
+            span.link.link--info
+              = t('labels.admin.info')
+  .sidebar__toggle.js-sidebar-toggle

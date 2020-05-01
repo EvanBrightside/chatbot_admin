@@ -1,0 +1,19 @@
+staging:
+  adapter: postgresql
+  database: chatbot_template_staging
+
+production:
+  adapter: postgresql
+  database: 
+  username: 
+  password: 
+  host: 
+
+development:
+  adapter: postgresql
+  database: chatbot_template_development
+
+test:
+  adapter: postgresql
+  database: chatbot_template_test
+  min_messages: warning

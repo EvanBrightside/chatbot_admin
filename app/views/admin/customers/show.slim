@@ -1,0 +1,13 @@
+- resource_title
+= resource_header
+
+.f__fieldset
+  p= "Имя: #{resource.first_name}"
+  p= "Фамилия: #{resource.last_name}"
+  p= "Email: #{resource.email}"
+  p= "Мессенджер: #{resource.adapter_name}"
+  p= "ID: #{resource.messenger_id}"
+
+- content_for :topbar_button do
+  .actions__item
+    = link_to 'Список пользователей', admin_customers_path, class: 'actions__link actions__link--back'

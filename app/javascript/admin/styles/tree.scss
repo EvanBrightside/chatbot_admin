@@ -1,0 +1,163 @@
+@media screen and (min-width: 1280px) {
+	.chart {
+		height: 435px;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.chart {
+		height: 630px;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.chart {
+		height: 810px;
+		width: 100%;
+	}
+}
+//table-list__remove
+.existing {
+	margin-left: 2.5%
+}
+
+#chat-tree .node,
+#chat-tree svg {
+	transition: transform 50ms ease-in-out;
+}
+
+.chat-tree-wrapper {
+	position: relative;
+	overflow: scroll;
+	width: 100%;
+	height: 72vh;
+	margin: 15px auto;
+	border: 3px solid #DDD;
+	border-radius: 3px;
+}
+
+.chart {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: visible!important;
+	width: fit-content;
+	height: fit-content;
+}
+
+.node {
+	font-size: 11px;
+
+	.node-name {
+		white-space: nowrap;
+	}
+	.node-title{
+		white-space: nowrap;
+		position: absolute;
+		left: calc(50% - 50px);
+		bottom: 55px;
+		font-size: 18px;
+	}
+}
+
+.node.chat-tree-node {
+	width: fit-content;
+	width: -moz-fit-content;
+	min-width: 40px;
+	height: fit-content;
+	min-height: 30px;
+	padding: 13px 23px;
+	text-align: center;
+	border: 2px solid #d0d0d0;
+	border-radius: 6px;
+	background: #fff;
+
+	.node-name {
+		color: #7B7B7B;
+		margin: 0;
+		font-size: 18px;
+	}
+
+	&.bold{
+		.node-name {
+			font-weight: 1000;
+		}
+	}
+
+	&.message-node{
+		background: #ededed;
+	}
+
+	&.answer-node{
+		border-radius: 60px;
+	}
+
+	&.plus-node{
+		display: flex;
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		border-radius: 100%;
+
+		.node-name{
+			margin: auto;
+		}
+	}
+
+	&.new-node{
+		background: aliceblue;
+		border: 2px solid #add3ff;
+	}
+}
+
+.pagination {
+  display: flex
+}
+
+.chat-tree-legend {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+
+	.legend-item {
+		position: relative;
+		width: 30%;
+		padding-left: 80px;
+
+		a.node {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 70px;
+			height: 30px;
+			margin-right: 5px;
+			margin-bottom: 12px;
+			padding: 7px 10px;
+			font-size: 9px;
+			color: #5B5B5B;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		span, p {
+			margin-top: 4px;
+			font-size: 14px;
+		}
+
+		span {
+			position: absolute;
+		}
+
+		p {
+			display: inline-block;
+			margin-left: 25px;
+		}
+	}
+}

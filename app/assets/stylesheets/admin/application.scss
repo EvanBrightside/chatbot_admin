@@ -1,0 +1,37 @@
+@import 'actiontext';
+@import 'tree';
+
+.legend_nested  {
+  width: 518px;
+  margin-left: 23%;
+}
+
+.f__legend {
+  &.second_level {
+    padding: 40px 0 4px;
+  }
+}
+
+.video_input {
+  width: inherit;
+}
+
+.datepicker {
+  border: 0;
+  border-radius: 0;
+  .prev, .next {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &::before, &::after {
+    display: none;
+  }
+  td {
+    &.today {
+      background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    &.active {
+      background-color: #27bdbe !important;
+    }
+  }
+}

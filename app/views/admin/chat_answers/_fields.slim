@@ -1,0 +1,13 @@
+.f__fieldset.toggle-fields-container
+  = f.input :prev_message_id, as: :hidden
+  = f.input :chat_tree_id, as: :hidden
+  = f.input :meta_type, include_blank: false, input_html: { class: 'toggle-fields select2it' }, collection: f.object.meta_type_options
+  = f.input :text, autofocus: true, input_html: { maxlength: 35 }, wrapper_html: { class: 'options__item', 'data-type': 'option link link_to_back link_to_start' }
+  = f.input :link_node, as: :select,
+                        collection: f.object.any_nodes.map{|n| [n.name, n.signature]},
+                        selected: f.object.link_node&.signature,
+                        input_html: { class: 'select2it' },
+                        wrapper_html: { class: 'options__item', 'data-type': 'link' }
+  .toggle-fields-container.options__item data-type='user_input'
+    = f.input :valid_regexp, include_blank: 'Нет', input_html: { class: 'select2it toggle-fields' }
+    = f.input :error_message, wrapper_html: { class: 'options__item', 'data-type': 'email phone emailorphone' }

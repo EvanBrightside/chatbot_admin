@@ -1,0 +1,26 @@
+{
+  "name": "chatbot_template",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "adminos": "^1.0.0-rc.8",
+    "chart.js": "^2.9.3",
+    "chartkick": "^3.2.0",
+    "dragscroll": "^0.0.8",
+    "jquery": "^3.5.0",
+    "jquery-datetimepicker": "^2.5.21",
+    "moment": "^2.25.1",
+    "popper.js": "^1.16.1",
+    "raphael": "^2.3.0",
+    "tether": "^1.4.7",
+    "treant-js": "^1.0.1",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  }
+}

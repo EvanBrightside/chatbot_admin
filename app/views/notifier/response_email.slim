@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+  body
+    - unless @customer.nil?
+      p = "Имя: #{@customer.first_name.to_s.strip}"
+      p = "Фамилия: #{@customer.last_name.to_s.strip}"
+      p = "Email: #{@customer&.email}"
+      p = "Мессенржед: #{@customer&.adapter_name}"
+      p = "ID: #{@customer&.messenger_id}"
+    p = "Вопрос: #{@text_data}"
