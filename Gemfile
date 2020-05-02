@@ -31,6 +31,8 @@ gem 'whenever', require: false
 gem 'daemons'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'dip', require: false
+
 ## Admin UI
 gem 'adminos', github: 'EvanBrightside/adminos', branch: 'update/rails-6'
 
