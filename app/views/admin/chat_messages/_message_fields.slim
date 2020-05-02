@@ -4,8 +4,8 @@ tr.nested-fields
     = f.simple_fields_for :adapters, adapters_obj do |field|
       - DialogService::ADAPTERS.each do |adapter|
         - checked = adapters_obj.send(adapter) != '0'
-        = field.input adapter, as: :boolean, wrapper: :check, input_html: { checked: checked }
-    = f.input :meta_type, include_blank: false, input_html: { class: 'toggle-fields select2it' }
+        = field.input adapter, label: I18n.t("simple_form.labels.chat_message.messages.adapters.#{adapter}"),as: :boolean, wrapper: :check, input_html: { checked: checked }
+    = f.input :meta_type, input_html: { class: 'select2it toggle-fields' }, include_blank: false
     = f.input :text, as: :text, wrapper_html: { class: 'options__item', 'data-type': 'text' }
     = f.input :file, as: :carrierwave, wrapper_html: { class: 'options__item', 'data-type': 'file' }
     = f.input :photo, as: :carrierwave, wrapper_html: { class: 'options__item', 'data-type': 'photo' }
