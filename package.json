@@ -1,6 +1,9 @@
 {
   "name": "chatbot_template",
   "private": true,
+  "resolutions": {
+   "moment": "2.24.0"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
@@ -12,7 +15,6 @@
     "dragscroll": "^0.0.8",
     "jquery": "^3.5.0",
     "jquery-datetimepicker": "^2.5.21",
-    "moment": "^2.25.1",
     "popper.js": "^1.16.1",
     "raphael": "^2.3.0",
     "tether": "^1.4.7",
