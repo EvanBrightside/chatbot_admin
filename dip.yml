@@ -68,7 +68,7 @@ interaction:
   psql:
     description: Run psql console
     service: postgres
-    command: psql -h postgres -U postgres -d example_app_dev
+    command: psql -h postgres -U postgres -d chabot_template
 
   'redis-cli':
     description: Run Redis console
