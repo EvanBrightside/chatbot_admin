@@ -1,5 +1,5 @@
 {
-  "name": "chatbot_template",
+  "name": "chatbot_admin",
   "private": true,
   "resolutions": {
    "moment": "2.24.0"

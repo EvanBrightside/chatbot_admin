@@ -1,5 +1,5 @@
-set :application, 'chatbot_template'
-set :repo_url, 'git@github.com:EvanBrightside/chatbot_template.git'
+set :application, 'chatbot_admin'
+set :repo_url, 'git@github.com:EvanBrightside/chatbot_admin.git'
 
 set :config_files, %w[config/database.yml .env]
 append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'

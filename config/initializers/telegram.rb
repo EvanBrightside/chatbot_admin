@@ -1,4 +1,4 @@
-require 'telegram_client_patch'
+# require 'telegram_client_patch'
 
 Rails.application.configure do
   config.to_prepare do

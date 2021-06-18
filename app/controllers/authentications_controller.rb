@@ -25,7 +25,7 @@ class AuthenticationsController < Devise::OmniauthCallbacksController
     end
 
     cookies.delete :link_auth_modal
-    auth.update_attribute :user, user
+    auth.update :user, user
     current_user.destroy
 
     sign_in :user, user
@@ -79,7 +79,7 @@ class AuthenticationsController < Devise::OmniauthCallbacksController
   end
 
   def create_auth_and_sign_in_matching_user
-    new_auth.update_attribute :user, matching_user
+    new_auth.update :user, matching_user
     flash[:notice] = t('social.email_bind_success', provider: omni.provider.capitalize)
     sign_in_and_redirect new_auth.user, event: :authentication
   end

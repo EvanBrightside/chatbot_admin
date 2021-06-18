@@ -3,6 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
+require File.expand_path("../lib/extensions/scoped_search_definition_ruby_3_fix.rb", __dir__)
 
 module ChatbotTemplate
   class Application < Rails::Application

@@ -73,8 +73,8 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   # config.i18n.fallbacks = true
 
-  config.action_mailer.default_url_options = { host: 'https://chatbot_template.molinos.dev/' }
-  Rails.application.routes.default_url_options[:host] = 'https://chatbot_template.molinos.dev'
+  config.action_mailer.default_url_options = { host: 'https://chatbot_admin.heroku.com/' }
+  Rails.application.routes.default_url_options[:host] = 'https://chatbot_admin.heroku.com'
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {

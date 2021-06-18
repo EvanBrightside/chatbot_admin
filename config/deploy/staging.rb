@@ -1,6 +1,6 @@
-server 'chatbot_template.staging', user: 'app', roles: %w(web app db)
+server 'chatbot_admin.staging', user: 'app', roles: %w(web app db)
 
-set :domain, "chatbot_template.molinos.dev"
+set :domain, "chatbot_admin.heroku.com"
 set :keep_releases, 5
 set :rails_env, :staging
 set :branch, :develop

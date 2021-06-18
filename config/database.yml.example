@@ -1,6 +1,6 @@
 staging:
   adapter: postgresql
-  database: chatbot_template_staging
+  database: chatbot_admin_staging
 
 production:
   adapter: postgresql
@@ -11,9 +11,9 @@ production:
 
 development:
   adapter: postgresql
-  database: chatbot_template_development
+  database: chatbot_admin_development
 
 test:
   adapter: postgresql
-  database: chatbot_template_test
+  database: chatbot_admin_test
   min_messages: warning

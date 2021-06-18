@@ -22,7 +22,7 @@ class Admin::ChatScriptsController < Admin::BaseController
   end
 
   def update
-    resource.update_attributes(parameters)
+    resource.update!(resource.id, parameters)
     redirect_to admin_chat_tree_path(resource.chat_tree)
   end
 

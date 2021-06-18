@@ -1,2 +1,6 @@
-Settings.first_or_initialize.update_attributes email: 'studio@molinos.dev', email_header_from: 'studio@molinos.dev', company_name: 'Adminos'
-User.create email: 'studio@molinos.ru', password: 'changeme', roles: [:admin]
+Settings.first_or_initialize(
+  email: 'mate@assistant.dev',
+  email_header_from: 'mate@assistant.dev',
+  company_name: 'MateAssistant'
+).save!(validate: false)
+User.create email: 'mate@assistant.dev', password: 'yourbodydance', roles: [:admin]
