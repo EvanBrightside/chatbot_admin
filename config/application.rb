@@ -5,7 +5,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 require File.expand_path("../lib/extensions/scoped_search_definition_ruby_3_fix.rb", __dir__)
 
-module ChatbotTemplate
+module ChatbotAdmin
   class Application < Rails::Application
     config.i18n.default_locale = :ru
     config.time_zone = 'Moscow'
