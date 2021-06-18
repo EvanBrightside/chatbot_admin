@@ -7,7 +7,7 @@
         - if resource.meta_type == 'manual'
           = link_to 'Назад', admin_custom_messages_path, class: 'actions__link actions__link--back'
         - else
-          = link_to 'Назад', admin_index_path(resource.class), class: 'actions__link actions__link--back'
+          = link_to 'Назад', polymorphic_path([:admin, resource.class]), class: 'actions__link actions__link--back'
       h1= resource.name
 
 input type="range" id="chat-tree-zoom" value="1" min="0.5" max="1.2" step="0.01"

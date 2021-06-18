@@ -23,7 +23,7 @@ class Admin::ChatMessagesController < Admin::BaseController
   end
 
   def update
-    resource.update!(resource.id, parameters)
+    resource.update(parameters)
     redirect_to location_for_upd
     kill_job
     delivery_by_timer if (resource.manual? && resource&.send_it?)

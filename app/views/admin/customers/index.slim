@@ -23,7 +23,8 @@
               td= customer.adapter_name
               td= customer.email
               td= t("admin.customers.notifications.#{customer.notification}")
-              td= format_date customer.created_at
+              td= customer.created_at
+                / format_date customer.created_at
               td.table-list__check
                 = admin_cb(customer)
 
