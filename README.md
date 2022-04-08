@@ -16,6 +16,7 @@
 * Ruby 3.0.1
 * PostgreSQL 12.2
 * Redis 5.0.7
+* Node 14
 
 ## Usage
 

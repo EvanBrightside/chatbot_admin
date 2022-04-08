@@ -7,6 +7,7 @@ module ApplicationHelper
   end
 
   def format_date(date)
-    "#{Russian.strftime(date, '%d %B %Y, %H:%M')}" if date
+    date.strftime('%d %B %Y, %H:%M') if date
+    # "#{Russian.strftime(date, '%d %B %Y, %H:%M')}" if date
   end
 end

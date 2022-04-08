@@ -617,7 +617,6 @@ DEPENDENCIES
   enumerize
   factory_bot_rails
   faker
-  friendly_id
   guard
   guard-livereload (~> 2.5)
   image_processing
