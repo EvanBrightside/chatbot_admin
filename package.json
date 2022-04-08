@@ -10,7 +10,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "adminos": "^1.0.0-rc.8",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartkick": "^3.2.0",
     "dragscroll": "^0.0.8",
     "jquery": "^3.5.0",
